@@ -30,6 +30,10 @@
 | `CHG-20260516-022-background-ink-landscape` | 变更 | active | 替换运行时背景为低对比水墨远山风格并修复导入缓存加载问题。 | `CHG-20260516-022-background-ink-landscape.md` |
 | `CHG-20260516-023-remove-empty-resource-badges` | 变更 | active | 移除地图和斗法等界面的空资源徽章占位栏，并恢复斗法玩家数据展示。 | `CHG-20260516-023-remove-empty-resource-badges.md` |
 | `CHG-20260516-024-card-face-visual-upgrade` | 变更 | active | 沉淀 UI 验收问题到通用工作流，并升级卡面视觉层级。 | `CHG-20260516-024-card-face-visual-upgrade.md` |
+| `CHG-20260516-025-game-lifecycle-workflow-hardening` | 变更 | active | 加固通用游戏开发生命周期工作流的开发前硬门禁、素材管线、UI hitbox 和交互验证。 | `CHG-20260516-025-game-lifecycle-workflow-hardening.md` |
+| `CHG-20260516-026-game-lifecycle-project-sync` | 变更 | active | 补充通用游戏开发生命周期工作流的项目侧执行同步门控和模板。 | `CHG-20260516-026-game-lifecycle-project-sync.md` |
+| `CHG-20260516-027-game-iteration-ui-ux-spec` | 变更 | active | 补充游戏迭代工作流的 UI/UX 可开发规格门控和模板。 | `CHG-20260516-027-game-iteration-ui-ux-spec.md` |
+| `CHG-20260516-028-workflow-knowledge-hardening` | 变更 | active | 沉淀 UI 节点生命周期排查和 CHG/VER/INDEX 追溯闭合规则。 | `CHG-20260516-028-workflow-knowledge-hardening.md` |
 | `VER-20260515-001-doc-entry-check` | 验证 | active | 文档入口、THarness 门控和单元测试检查。 | `VER-20260515-001-doc-entry-check.md` |
 | `VER-20260515-002-encoding-check` | 验证 | active | 文本编码检查和回归验证。 | `VER-20260515-002-encoding-check.md` |
 | `VER-20260516-001-game-data-blueprint-check` | 验证 | active | 完整游戏数据设计蓝图写入和边界检查。 | `VER-20260516-001-game-data-blueprint-check.md` |
@@ -57,6 +61,10 @@
 | `VER-20260516-023-background-ink-landscape-check` | 验证 | active | 水墨远山背景替换后的构建、导入、数据、Godot MCP 实测和编码检查。 | `VER-20260516-023-background-ink-landscape-check.md` |
 | `VER-20260516-024-remove-empty-resource-badges-check` | 验证 | active | 空资源徽章占位栏移除后的构建、数据、Godot MCP 实测和编码检查。 | `VER-20260516-024-remove-empty-resource-badges-check.md` |
 | `VER-20260516-025-card-face-visual-upgrade-check` | 验证 | active | 卡面视觉升级后的资源生成、构建、数据、Godot MCP 实测和编码检查。 | `VER-20260516-025-card-face-visual-upgrade-check.md` |
+| `VER-20260516-026-game-lifecycle-workflow-hardening-check` | 验证 | active | 通用游戏开发生命周期工作流加固后的 THarness 自检、编码和空白检查。 | `VER-20260516-026-game-lifecycle-workflow-hardening-check.md` |
+| `VER-20260516-027-game-lifecycle-project-sync-check` | 验证 | active | 通用游戏开发生命周期项目侧同步门控后的 THarness 自检、编码和空白检查。 | `VER-20260516-027-game-lifecycle-project-sync-check.md` |
+| `VER-20260516-028-game-iteration-ui-ux-spec-check` | 验证 | active | 游戏迭代 UI/UX 可开发规格门控后的 THarness 自检、编码和空白检查。 | `VER-20260516-028-game-iteration-ui-ux-spec-check.md` |
+| `VER-20260516-029-workflow-knowledge-hardening-check` | 验证 | active | UI 节点生命周期和追溯闭合规则沉淀后的 THarness 自检、编码和空白检查。 | `VER-20260516-029-workflow-knowledge-hardening-check.md` |
 
 ## 状态说明
 

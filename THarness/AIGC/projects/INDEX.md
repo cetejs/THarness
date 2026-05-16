@@ -19,7 +19,7 @@
 | `rules/project-isolation.md` | 判断通用 AIGC 与项目内容边界。 |
 | `rules/project-wiki.md` | 需要理解项目 wiki 总规则。 |
 | `rules/project-wiki-bootstrap.md` | 需要检索已有工程并主动搭建项目 wiki。 |
-| `rules/project-wiki-update.md` | 需要在开发后更新已有项目 wiki。 |
+| `rules/project-wiki-update.md` | 需要在开发后更新已有项目 wiki，或检查项目 CHG、VER 和索引追溯闭合。 |
 | `rules/project-wiki-retrieval.md` | 工作流需要查找项目工程 wiki。 |
 | `rules/project-wiki-health.md` | 需要检查项目 wiki 入口、断链、来源或事实边界。 |
 | `rules/project-wiki-creation.md` | 需要创建完整项目 wiki 结构、页面和来源索引。 |

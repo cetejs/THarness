@@ -1,6 +1,6 @@
 # AIGC 版本
 
-current_version: 2.3.0
+current_version: 2.7.0
 
 ## 版本级别
 
@@ -32,6 +32,9 @@ current_version: 2.3.0
 - 项目 wiki `design/` 和 `development/` 分区。
 - Unity UGUI UI 图转施工工作流和复杂 UI 上下文隔离策略。
 - 游戏迭代工作流。
+- 游戏迭代中的 UI/UX 可开发规格规则和模板。
+- 游戏开发生命周期工作流。
+- UI 节点生命周期排查和项目追溯闭合检查。
 
 ## 当前版本功能
 
@@ -39,7 +42,8 @@ current_version: 2.3.0
 | --- | --- | --- | --- |
 | 低 token 工作流路由 | active | `../workflows/INDEX.md` | 先读索引，再按 `read_when` 读取命中的工作流和规则。 |
 | 策划案讨论 | active | `../workflows/planning-discussion/WORKFLOW.md` | 把模糊需求讨论成目标、范围、约束、风险和成功标准明确的项目 wiki 策划页面；游戏策划问题会进一步转成玩家幻想、核心体验、机制、反馈和验证原型。 |
-| 游戏迭代 | active | `../workflows/game-iteration/WORKFLOW.md` | 把游戏想法推进到可持续迭代流程，补齐最小可玩循环、界面拆分、数据蓝图、开发门控和交接 development 的输入包。 |
+| 游戏迭代 | active | `../workflows/game-iteration/WORKFLOW.md` | 把游戏想法推进到可持续迭代流程，补齐最小可玩循环、界面拆分、UI/UX 可开发规格、数据蓝图、开发门控和交接 development 的输入包。 |
+| 游戏开发生命周期 | active | `../workflows/game-development-lifecycle/WORKFLOW.md` | 把游戏项目从准备、实现、视觉校准、运行时排查、验证到复盘沉淀成闭环，并要求开发前硬门禁、素材管线合同、UI hitbox、真实交互验收、UI 节点生命周期排查和项目侧执行同步。 |
 | 开发执行 | active | `../workflows/development/WORKFLOW.md` | 由主程把项目 wiki 中已确认的策划页面拆成项目 wiki 开发任务页，按游戏模块角色分配给全新会话执行，并集成验收。 |
 | Unity UGUI UI 图转施工 | active | `../workflows/unity-ugui-ui-workflow/WORKFLOW.md` | 把 UI 截图、效果图或素材图按快速路径、资源核查路径或独立施工路径转成 UI 规划、资源验收、UGUI Prefab 施工、Controller 事件接口和截图校准反馈；复杂 UI 命中上下文隔离规则时文件化长产物。 |
 | 游戏开发角色路由 | active | `../workflows/development/rules/game-role-routing.md` | 按 UI、3C、场景、战斗、AI、玩法系统、工具、技术美术和 QA 验证分配子任务，并限制角色读取项目 wiki 子任务页允许的入口。 |
@@ -51,7 +55,7 @@ current_version: 2.3.0
 | 知识分层 | active | `../wiki/architecture/knowledge-layering.md` | 把大内容拆成默认速查入口和按需详解，降低重复读取成本。 |
 | 项目适配层规则 | active | `../projects/INDEX.md` | 定义目标项目自己的 AIGC 适配层创建方式，隔离项目事实。 |
 | 项目 wiki 主动搭建 | active | `../projects/rules/project-wiki-bootstrap.md` | 检索已有工程并在目标项目适配层建立包含 `design/` 和 `development/` 分区的项目 wiki。 |
-| 项目 wiki 更新 | active | `../projects/rules/project-wiki-update.md` | 在策划或开发后更新目标项目 wiki，并保持项目事实可检索。 |
+| 项目 wiki 更新 | active | `../projects/rules/project-wiki-update.md` | 在策划或开发后更新目标项目 wiki，并保持项目事实可检索，CHG、VER 和索引记录闭合。 |
 | OneHarness 自检 | active | `../../tools/oneharness.py` | 用 `doctor`、`index --check` 和 `gate` 检查入口、元数据、索引和门控。 |
 | 自检触发规则 | active | `../workflows/development/rules/self-check.md` | 按 OneHarness 自身改动范围自动选择并运行自检命令。 |
 | Wiki 索引同步 | active | `../../tools/oneharness.py` | 用 `index --write` 按扫描结果写回 wiki 页面清单。 |
@@ -67,7 +71,10 @@ current_version: 2.3.0
 - 项目策划事实写入目标项目 wiki 的 `design/` 分区。
 - 主程任务拆解、子任务分配和接口契约写入目标项目 wiki 的 `development/` 分区。
 - Unity UGUI UI 工作流只保存跨项目可复用的瘦身执行路径、已切资源验收规则、施工约束、上下文隔离策略和报告模板；具体界面事实、素材路径、项目 UI 规范和运行记录仍写入目标项目适配层。
-- 游戏迭代工作流只保存从游戏想法到最小可玩循环、数据蓝图、开发门控和 development 交接的通用步骤；具体游戏内容、数值、素材路径和任务记录仍写入目标项目适配层。
+- 游戏迭代工作流只保存从游戏想法到最小可玩循环、UI/UX 可开发规格、数据蓝图、开发门控和 development 交接的通用步骤；具体游戏内容、数值、素材路径和任务记录仍写入目标项目适配层。
+- 游戏开发生命周期工作流只保存跨项目通用阶段、硬门禁、模板、排查、验收和项目侧同步规则；具体引擎路径、素材路径、运行截图、日志和项目事实仍写入目标项目适配层。
+- UI 节点生命周期规则只保存跨引擎排查方法和 Godot 等引擎的通用注意事项；具体节点路径、截图和日志仍写入目标项目适配层。
+- 项目追溯闭合规则只定义 CHG、VER、ID 和索引的通用检查方式；具体追溯记录仍写入目标项目适配层。
 - 工作流运行过程、失败尝试、命令输出和候选知识审核过程写入运行记录或交付物，不写入项目 wiki 正文。
 - 自检配置只保存通用检查入口、扫描范围、必需字段和门控规则，不保存目标项目事实。
 - 游戏策划方法卡只保存方法论结构和来源锚点，不保存书籍原文或具体项目玩法事实。
@@ -100,4 +107,7 @@ current_version: 2.3.0
 - 开发任务拆解规则可从 `../workflows/development/rules/INDEX.md` 命中，并写入项目 wiki `development/` 分区。
 - 项目 wiki `design/` 和 `development/` 分区可从项目 wiki 入口模板和项目 wiki 检索规则命中。
 - Unity UGUI UI 工作流可从 `../workflows/INDEX.md` 路由到 `../workflows/unity-ugui-ui-workflow/WORKFLOW.md`，并按输入完整度、UI 规划、资源验收与拼装、Unity 施工、截图校准和上下文隔离规则继续读取。
-- 游戏迭代工作流可从 `../workflows/INDEX.md` 路由到 `../workflows/game-iteration/WORKFLOW.md`，并按输入边界、最小可玩循环与界面拆分、数据蓝图和开发门控规则继续读取。
+- 游戏迭代工作流可从 `../workflows/INDEX.md` 路由到 `../workflows/game-iteration/WORKFLOW.md`，并按输入边界、最小可玩循环与界面拆分、UI/UX 可开发规格、数据蓝图和开发门控规则继续读取。
+- 游戏开发生命周期工作流可从 `../workflows/INDEX.md` 和能力索引路由到 `../workflows/game-development-lifecycle/WORKFLOW.md`，并按开发前硬门禁、素材管线、UI hitbox、交互验证、项目侧执行同步和复盘规则继续读取。
+- UI 节点生命周期检查可从 `../workflows/game-development-lifecycle/rules/debug-observability.md` 命中。
+- 项目追溯闭合检查可从 `../projects/rules/project-wiki-update.md` 命中。
