@@ -42,6 +42,7 @@ AI 进入本目录时，优先按以下顺序读取：
 | 场景 | 工作流 |
 | --- | --- |
 | 需求模糊，需要澄清目标、范围、非目标、约束或成功标准 | `planning-discussion` |
+| 游戏项目需要从策划推进到最小可玩循环、数据蓝图、开发门控和迭代交接 | `game-iteration` |
 | 目标明确，需要开发、修复、补文档、补测试或推进 MVP 闭环 | `development` |
 | 用户提供 UI 截图、效果图或素材图，需要转成 Unity UGUI 策划、资源验收、Prefab 施工或截图校准交付物 | `unity-ugui-ui-workflow` |
 | 需要为目标项目搭建、检索、更新或检查项目 wiki | `project-wiki-maintenance` |
@@ -96,6 +97,8 @@ AI 进入本目录时，优先按以下顺序读取：
 如果只是阅读规则，从 `AIGC/INDEX.md` 开始。
 
 如果要讨论方案，进入 `workflows/planning-discussion/`。
+
+如果要把游戏想法推进为最小可玩循环、数据蓝图、开发门控和开发交接输入包，进入 `workflows/game-iteration/`。
 
 如果要执行开发，进入 `workflows/development/`。
 

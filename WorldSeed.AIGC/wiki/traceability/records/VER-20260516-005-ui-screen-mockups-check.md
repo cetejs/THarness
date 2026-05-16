@@ -1,0 +1,31 @@
+# VER-20260516-005-ui-screen-mockups-check
+
+## 状态
+
+- status: active
+- source: 本地命令验证和人工检查
+- updated: 2026-05-16
+
+## 验证目标
+
+验证第一阶段界面视觉效果图草案已生成、已写入设计文档，并保持文本编码正常。
+
+## 验证项
+
+| 验证项 | 方式 | 结果 |
+| --- | --- | --- |
+| 效果图生成 | `python WorldSeed.Experiments\ui-screen-mockups-20260516\render_ui_mockups.py` | 通过 |
+| 效果图数量 | 检查 `ui-screen-mockups-v0.1` 下 14 个 PNG | 通过 |
+| 单界面图分辨率 | 检查 13 个界面图均为 1280x720 | 通过 |
+| 总览图分辨率 | 检查 `ui-000-overview.png` 为 1280x1232 | 通过 |
+| 文档引用 | 检查 `ui-screen-visual-spec-v0.1.md` 引用 13 个界面图和 1 个总览图 | 通过 |
+| 文本编码 | `python tools\check_text_encoding.py --root .` | 通过 |
+
+## 局限
+
+当前效果图是使用现有占位素材和静态绘制脚本合成的视觉草案，不等同于 Godot 实机截图。用户确认后，后续开发应以该视觉草案为目标在 Godot 中实现并再做实机截图验证。
+
+## 关联记录
+
+- `CHG-20260516-005-ui-screen-mockups`
+- `WorldSeed.AIGC/wiki/design/ui-screen-visual-spec-v0.1.md`

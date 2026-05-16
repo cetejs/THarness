@@ -1,0 +1,295 @@
+{
+  "id": "worldseed_acceptance_asset_pack_v0_1",
+  "style": "xianxia_card_handpainted_acceptance",
+  "generated_by": "tools/generate_acceptance_assets.py",
+  "files": [
+    {
+      "path": "assets/cards/card_attack.png",
+      "size": [
+        512,
+        736
+      ],
+      "sha256": "f840b5178f2bf8bc9baadc77232b3d2fc9841b3111339b79176035811bbe4e94"
+    },
+    {
+      "path": "assets/cards/card_curse.png",
+      "size": [
+        512,
+        736
+      ],
+      "sha256": "c12653939f68a9f1df148c12938ef7d6a145b3d96b673239bd4e2953ca6ea8d9"
+    },
+    {
+      "path": "assets/cards/card_defense.png",
+      "size": [
+        512,
+        736
+      ],
+      "sha256": "cd4546408dceb19ad0c9738711148cbd7c274fe5989362c069a869bea1753a21"
+    },
+    {
+      "path": "assets/cards/card_skill.png",
+      "size": [
+        512,
+        736
+      ],
+      "sha256": "2f3049f06dbcad2965c5321c8dc309a101c7f8dc436bb853c6db57cb7c168274"
+    },
+    {
+      "path": "assets/cards/card_support.png",
+      "size": [
+        512,
+        736
+      ],
+      "sha256": "5793ad7fdf104de4cd63d96a11804ae2575cf034de4e788bc8d6e9507ec3933d"
+    },
+    {
+      "path": "assets/icons/icon_armor.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "eecc783b4bf36d88cc2b9bfeb16fa5f7684081d0645e35b471ea7ff919163c0c"
+    },
+    {
+      "path": "assets/icons/icon_coin.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "3f2bf269f94f8b238f4cbc15f43fe44549b25170f19369e8c5111a0c75535b4a"
+    },
+    {
+      "path": "assets/icons/icon_energy.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "f5d8bc227c028f0b7d311ebf722463a750526f0d2f3987f44e414fde2a62eb47"
+    },
+    {
+      "path": "assets/icons/icon_health.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "93cbc560a586471e995b3ba2fc27ce99f3aef9bcba5ebfe89acae303ac706c96"
+    },
+    {
+      "path": "assets/icons/socket_attack.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "4bb2caefb2f22bf0b62e334d34276506dae05dfd411e831e470a8b0143a3714e"
+    },
+    {
+      "path": "assets/icons/socket_empty.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "c69b9087fc520542031265f16c0ce52f15646bd9f26d3847becba7d4eca26afe"
+    },
+    {
+      "path": "assets/icons/socket_poison.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "b4b19ebb44c537d34ff9c65051c33af7a3dee9773a14997e14b67e4365821a21"
+    },
+    {
+      "path": "assets/icons/socket_spell.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "2c1ab7e396845539ace797df43cdfbaf75b447ec21129589ae7b6b379f3fa5c1"
+    },
+    {
+      "path": "assets/map/node_battle.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "fe9e3097f06767f064be3af5511d89f3e2444fc913e0472821964e381c48a0b4"
+    },
+    {
+      "path": "assets/map/node_boss.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "ff59bb6d7b85f84d951b8ae044e9530feb6615d87a7cf6ca34869a637ce68c04"
+    },
+    {
+      "path": "assets/map/node_elite.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "4fd63db8ea528b00fe4f3d61a7da1fd7ff44680d2b42938f6b96a3a86cbec66f"
+    },
+    {
+      "path": "assets/map/node_event.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "61718aea45eb98ea2bea36a7e96c1a8f2d2efe3924dfcf26e3f529767b191d3c"
+    },
+    {
+      "path": "assets/map/node_forge.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "c2958b12c4cf46dc0d81f935844173747fc03a4ed658d11da5d04306d0afaa91"
+    },
+    {
+      "path": "assets/map/node_shop.png",
+      "size": [
+        192,
+        192
+      ],
+      "sha256": "4837f811487927fe0f6f6ad6205961175b918672f1d43b79fd043f3cfbce2a50"
+    },
+    {
+      "path": "assets/preview/acceptance_asset_pack_preview.png",
+      "size": [
+        1050,
+        750
+      ],
+      "sha256": "563612f219369cebb2327bc39a8c98eb45f416bc42dffc33f991d2fabb7e0b44"
+    },
+    {
+      "path": "assets/status/icon_intent_attack.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "79347426dfd997c9e6fe2a8eb9a8e0e8b76dde8ce7d1d2700599fc631cdcb528"
+    },
+    {
+      "path": "assets/status/icon_intent_buff.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "eec0eff6f43354f6758491ebce46ec004a8824276af08101ac0079bb9c39557c"
+    },
+    {
+      "path": "assets/status/icon_intent_guard.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "c8438c1c1f5b6a4732ac8bcfb9b7f5ce41138943d991335578dd65b2c3550545"
+    },
+    {
+      "path": "assets/status/icon_status_burn.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "8360235b3376b834e3260f5bb08d6bf37b8ff4307e5e960dcfd27e5fa9644b1a"
+    },
+    {
+      "path": "assets/status/icon_status_freeze.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "b3da9b71b17d9e9322df1e6bd13bb753f2b0ba44d3acb6693a9f77a0df5c51c5"
+    },
+    {
+      "path": "assets/status/icon_status_lightning.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "f682442c77190e4c26562d6d3993bd04e109963f53c20d7447438fc1057e07d9"
+    },
+    {
+      "path": "assets/status/icon_status_poison.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "3a886e3d6659a13b6f85fd757ec5627ccac750cbedbe0b0359688561c5a0a60e"
+    },
+    {
+      "path": "assets/ui/background_ink_landscape.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "e9747e0f15ed4d0f22009a752b01d9ed717f8d45435142246baedecb81f5ca3b"
+    },
+    {
+      "path": "assets/ui/button_disabled.png",
+      "size": [
+        480,
+        128
+      ],
+      "sha256": "ca98ba2127cdd274bd939b9b8ce1a71c97b3ce1b163497762d2e5c5a1b925e1d"
+    },
+    {
+      "path": "assets/ui/button_hover.png",
+      "size": [
+        480,
+        128
+      ],
+      "sha256": "cf0ad74289693aad26e140f0fd6fffe264809a634768b5827fd35ee7d300589e"
+    },
+    {
+      "path": "assets/ui/button_normal.png",
+      "size": [
+        480,
+        128
+      ],
+      "sha256": "c2c633ba595196072daa8300f37bbdcce1e81dfa1bb9c544148a00fdd88ea892"
+    },
+    {
+      "path": "assets/ui/button_pressed.png",
+      "size": [
+        480,
+        128
+      ],
+      "sha256": "c7e38d6ca9455040fd366ef1d1e437b137553a6af9c077c68ec8643657096751"
+    },
+    {
+      "path": "assets/ui/panel_large.png",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "5c14d2e337f5d0c5e3e311300f66768dad8144e1a3f96bb637a83c21b067a2a1"
+    },
+    {
+      "path": "assets/ui/popup_panel.png",
+      "size": [
+        640,
+        360
+      ],
+      "sha256": "18f592ed63fb30b6120c0a9d77f9e7c9e78567cd632dd028a7a4e4d04b213daf"
+    },
+    {
+      "path": "assets/ui/tab_active.png",
+      "size": [
+        240,
+        80
+      ],
+      "sha256": "3b7e82898b43445b427dc3eec23adceddfebf6187eaee85b3aafb7caee472df8"
+    },
+    {
+      "path": "assets/ui/tab_inactive.png",
+      "size": [
+        240,
+        80
+      ],
+      "sha256": "0b647d3fba45a266bc4eb94eec34bc209a7cbf94216273d45195b97d0acfd91f"
+    }
+  ]
+}

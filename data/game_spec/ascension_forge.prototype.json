@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "id": "ascension_forge_prototype",
+    "display_name": "WorldSeed: 山海灵契",
+    "version": "0.1.0",
+    "content_tier": "first_stage_playable_loop"
+  },
+  "gameplay": {
+    "starting_energy": 3,
+    "cards_drawn_per_turn": 5,
+    "max_hand_size": 10,
+    "starting_gold": 60,
+    "armor_clears_each_turn": true
+  },
+  "ui_visual": {
+    "window_margin": 36,
+    "content_spacing": 18,
+    "compact_spacing": 9,
+    "title_font_size": 39,
+    "body_font_size": 27,
+    "small_font_size": 22,
+    "tiny_font_size": 19,
+    "button_width": 360,
+    "button_art_width": 0,
+    "button_height": 60,
+    "button_texture_margin": 16,
+    "panel_texture_margin": 24,
+    "hero_width": 780,
+    "hero_height": 450,
+    "portrait_size": 144,
+    "icon_size": 45,
+    "node_icon_size": 96,
+    "node_focus_size": 144,
+    "enemy_panel_width": 270,
+    "card_width": 225,
+    "card_height": 330,
+    "mini_card_width": 198,
+    "mini_card_height": 285,
+    "combat_card_width": 162,
+    "combat_card_height": 234,
+    "combat_player_panel_width": 264,
+    "combat_log_panel_width": 360,
+    "combat_top_panel_height": 327,
+    "combat_hand_panel_height": 375,
+    "deck_grid_columns": 3,
+    "log_panel_width": 840,
+    "log_panel_height": 120,
+    "combat_log_visible_lines": 4,
+    "feedback_flash_seconds": 0.18,
+    "debug_layout_logs": true,
+    "background_color": [0.91, 0.88, 0.81, 1.0],
+    "feedback_flash_color": [0.78, 0.54, 0.20, 0.24]
+  },
+  "ui_copy": {
+    "game_title": "WorldSeed: 山海灵契",
+    "health": "命元",
+    "armor": "罡气",
+    "energy": "灵力",
+    "gold": "灵石",
+    "talent_points": "悟道点",
+    "deck": "法门",
+    "support_inventory": "符箓库存",
+    "equipment": "法器",
+    "talent": "悟道",
+    "map": "灵脉图",
+    "combat": "斗法",
+    "reward": "斗法奖励",
+    "build": "构筑洞府",
+    "event": "奇遇",
+    "shop": "灵市/锻炉",
+    "chapter_result": "洞天结算",
+    "run_result": "本局结算"
+  },
+  "assets": {
+    "ui": {
+      "background": "res://assets/ui/background_ink_landscape.png",
+      "panel": "res://assets/ui/panel_large.png",
+      "popup": "res://assets/ui/popup_panel.png",
+      "button_normal": "res://assets/ui/button_normal.png",
+      "button_hover": "res://assets/ui/button_hover.png",
+      "button_pressed": "res://assets/ui/button_pressed.png",
+      "button_disabled": "res://assets/ui/button_disabled.png"
+    },
+    "card_frames": {
+      "attack": "res://assets/cards/card_attack.png",
+      "defense": "res://assets/cards/card_defense.png",
+      "skill": "res://assets/cards/card_skill.png",
+      "support": "res://assets/cards/card_support.png",
+      "curse": "res://assets/cards/card_curse.png"
+    },
+    "icons": {
+      "health": "res://assets/icons/icon_health.png",
+      "armor": "res://assets/icons/icon_armor.png",
+      "energy": "res://assets/icons/icon_energy.png",
+      "coin": "res://assets/icons/icon_coin.png",
+      "socket_empty": "res://assets/icons/socket_empty.png",
+      "socket_attack": "res://assets/icons/socket_attack.png",
+      "socket_spell": "res://assets/icons/socket_spell.png",
+      "socket_poison": "res://assets/icons/socket_poison.png"
+    },
+    "map_nodes": {
+      "normal": "res://assets/map/node_battle.png",
+      "elite": "res://assets/map/node_elite.png",
+      "event": "res://assets/map/node_event.png",
+      "shop": "res://assets/map/node_shop.png",
+      "forge": "res://assets/map/node_forge.png",
+      "boss": "res://assets/map/node_boss.png"
+    },
+    "status": {
+      "attack": "res://assets/status/icon_intent_attack.png",
+      "guard": "res://assets/status/icon_intent_guard.png",
+      "buff": "res://assets/status/icon_intent_buff.png",
+      "burn": "res://assets/status/icon_status_burn.png",
+      "poison": "res://assets/status/icon_status_poison.png",
+      "freeze": "res://assets/status/icon_status_freeze.png",
+      "shock": "res://assets/status/icon_status_lightning.png"
+    }
+  },
+  "ui_flow": {
+    "start_screen": "main_menu",
+    "screens": [
+      { "id": "main_menu", "display_name": "主菜单" },
+      { "id": "character_select", "display_name": "角色选择" },
+      { "id": "map", "display_name": "灵脉图" },
+      { "id": "combat", "display_name": "斗法" },
+      { "id": "reward", "display_name": "斗法奖励" },
+      { "id": "build", "display_name": "构筑洞府" },
+      { "id": "event", "display_name": "奇遇" },
+      { "id": "shop", "display_name": "灵市/锻炉" },
+      { "id": "chapter_result", "display_name": "洞天结算" },
+      { "id": "run_result", "display_name": "本局结算" }
+    ],
+    "transitions": [
+      { "from": "main_menu", "action": "new_run", "to": "character_select" },
+      { "from": "character_select", "action": "start_run", "to": "map" },
+      { "from": "map", "action": "enter_combat_node", "to": "combat" },
+      { "from": "map", "action": "enter_event_node", "to": "event" },
+      { "from": "map", "action": "enter_shop_node", "to": "shop" },
+      { "from": "combat", "action": "win_normal_or_elite", "to": "reward" },
+      { "from": "combat", "action": "win_boss", "to": "chapter_result" },
+      { "from": "combat", "action": "player_dead", "to": "run_result" },
+      { "from": "reward", "action": "claim_or_skip", "to": "build" },
+      { "from": "event", "action": "resolve_choice", "to": "build" },
+      { "from": "shop", "action": "leave", "to": "build" },
+      { "from": "build", "action": "return_map", "to": "map" },
+      { "from": "chapter_result", "action": "finish_run", "to": "run_result" },
+      { "from": "run_result", "action": "restart", "to": "character_select" },
+      { "from": "run_result", "action": "main_menu", "to": "main_menu" }
+    ]
+  },
+  "tags": [
+    { "id": "attack", "display_name": "攻击" },
+    { "id": "spell", "display_name": "法术" },
+    { "id": "fire", "display_name": "火焰" },
+    { "id": "block", "display_name": "格挡" },
+    { "id": "combo", "display_name": "连击" },
+    { "id": "support", "display_name": "辅助" }
+  ],
+  "status_effects": [
+    { "id": "burn", "display_name": "燃烧", "timing": "turn_start", "stacking": "intensity" },
+    { "id": "wound", "display_name": "创伤", "timing": "on_attack", "stacking": "intensity" }
+  ],
+  "characters": [
+    {
+      "id": "iron_oath",
+      "display_name": "铁誓者",
+      "archetype": "护体罡气反击",
+      "max_hp": 80,
+      "starting_deck": ["strike", "strike", "strike", "guard", "guard", "guard", "shield_bash", "iron_counter", "focus_breath", "ember_bolt"],
+      "starting_equipment": ["oath_blade"],
+      "starting_talents": ["iron_start"],
+      "asset_refs": { "portrait": "res://assets/icons/icon_armor.png" }
+    }
+  ],
+  "cards": [
+    { "id": "strike", "display_name": "劈山", "type": "attack", "cost": 1, "rarity": "starter", "tags": ["attack"], "support_slots": 1, "target_rule": "single_enemy", "effects": [{ "type": "damage", "amount": 6, "target": "enemy" }] },
+    { "id": "guard", "display_name": "守势", "type": "defense", "cost": 1, "rarity": "starter", "tags": ["block"], "support_slots": 0, "target_rule": "self", "effects": [{ "type": "gain_armor", "amount": 6, "target": "self" }] },
+    { "id": "shield_bash", "display_name": "盾击", "type": "attack", "cost": 1, "rarity": "starter", "tags": ["attack", "block"], "support_slots": 1, "target_rule": "single_enemy", "effects": [{ "type": "damage", "amount": 5, "target": "enemy" }, { "type": "gain_armor", "amount": 3, "target": "self" }] },
+    { "id": "iron_counter", "display_name": "铁誓反击", "type": "skill", "cost": 1, "rarity": "starter", "tags": ["block"], "support_slots": 1, "target_rule": "self", "effects": [{ "type": "gain_armor", "amount": 4, "target": "self" }, { "type": "next_attack_bonus", "amount": 3, "target": "self" }] },
+    { "id": "focus_breath", "display_name": "凝神", "type": "skill", "cost": 0, "rarity": "starter", "tags": [], "support_slots": 0, "target_rule": "self", "effects": [{ "type": "draw_cards", "amount": 1, "target": "self" }] },
+    { "id": "ember_bolt", "display_name": "星火符", "type": "attack", "cost": 1, "rarity": "starter", "tags": ["attack", "spell", "fire"], "support_slots": 2, "target_rule": "single_enemy", "effects": [{ "type": "damage", "amount": 5, "target": "enemy" }, { "type": "apply_status", "status": "burn", "amount": 2, "target": "enemy" }] },
+    { "id": "heavy_impact", "display_name": "重击符", "type": "support", "cost": 0, "rarity": "common", "tags": ["support", "attack"], "compatible_tags": ["attack"], "target_rule": "linked_card", "effects": [{ "type": "modify_damage", "amount": 3, "target": "linked_card" }] },
+    { "id": "guard_return", "display_name": "护返符", "type": "support", "cost": 0, "rarity": "common", "tags": ["support", "block"], "compatible_tags": ["block"], "target_rule": "linked_card", "effects": [{ "type": "gain_armor_after_use", "amount": 2, "target": "self" }] },
+    { "id": "ember_spread", "display_name": "余烬扩散", "type": "support", "cost": 0, "rarity": "common", "tags": ["support", "fire"], "compatible_tags": ["fire"], "target_rule": "linked_card", "effects": [{ "type": "modify_status_amount", "status": "burn", "amount": 1, "target": "linked_card" }] },
+    { "id": "fractured_memory", "display_name": "破碎记忆", "type": "curse", "cost": 0, "rarity": "curse", "tags": [], "target_rule": "none", "effects": [{ "type": "dead_card", "target": "self" }] }
+  ],
+  "equipment": [
+    { "id": "oath_blade", "display_name": "誓约刃", "slot": "weapon", "rarity": "starter", "effects": [{ "type": "tag_damage_bonus", "tag": "block", "amount": 1 }] },
+    { "id": "plate_coat", "display_name": "合金法衣", "slot": "armor", "rarity": "common", "effects": [{ "type": "max_hp", "amount": 8 }] },
+    { "id": "socket_ring", "display_name": "镶孔戒", "slot": "trinket", "rarity": "uncommon", "effects": [{ "type": "extra_support_slot_once", "amount": 1 }] }
+  ],
+  "affixes": [
+    { "id": "sturdy", "display_name": "稳固", "scope": "equipment", "effect": { "type": "max_hp", "amount": 4 }, "weight": 1 },
+    { "id": "heated", "display_name": "灼热", "scope": "equipment", "effect": { "type": "status_bonus", "status": "burn", "amount": 1 }, "weight": 1 }
+  ],
+  "talents": [
+    { "id": "iron_start", "display_name": "铁誓起点", "tree": "iron_oath", "cost": 1, "requires": [], "effects": [{ "type": "max_hp", "amount": 5 }] },
+    { "id": "iron_guard_plus", "display_name": "稳固护势", "tree": "iron_oath", "cost": 1, "requires": ["iron_start"], "effects": [{ "type": "tag_armor_bonus", "tag": "block", "amount": 1 }] },
+    { "id": "iron_wound", "display_name": "碎甲创伤", "tree": "iron_oath", "cost": 1, "requires": ["iron_guard_plus"], "effects": [{ "type": "apply_status_on_block_attack", "status": "wound", "amount": 1 }] }
+  ],
+  "enemies": [
+    { "id": "rust_mite", "display_name": "锈蚀虫", "tier": "normal", "max_hp": 20, "intents": [{ "type": "damage", "amount": 5, "target": "player" }, { "type": "gain_armor", "amount": 3, "target": "self" }] },
+    { "id": "ember_acolyte", "display_name": "余烬侍徒", "tier": "normal", "max_hp": 28, "intents": [{ "type": "damage", "amount": 7, "target": "player" }, { "type": "apply_status", "status": "burn", "amount": 1, "target": "player" }] },
+    { "id": "forge_guardian", "display_name": "熔炉守卫", "tier": "elite", "max_hp": 52, "intents": [{ "type": "damage", "amount": 10, "target": "player" }, { "type": "gain_armor", "amount": 8, "target": "self" }] },
+    { "id": "living_forge", "display_name": "活熔炉", "tier": "boss", "max_hp": 105, "intents": [{ "type": "damage", "amount": 13, "target": "player" }, { "type": "apply_status", "status": "burn", "amount": 2, "target": "player" }, { "type": "gain_armor", "amount": 10, "target": "self" }] }
+  ],
+  "encounters": [
+    { "id": "enc_rust_pair", "display_name": "锈蚀虫群", "tier": "normal", "enemy_ids": ["rust_mite", "rust_mite"], "reward_pool": "normal_combat" },
+    { "id": "enc_ember_patrol", "display_name": "余烬巡逻", "tier": "normal", "enemy_ids": ["ember_acolyte", "rust_mite"], "reward_pool": "normal_combat" },
+    { "id": "enc_forge_guardian", "display_name": "熔炉守卫", "tier": "elite", "enemy_ids": ["forge_guardian"], "reward_pool": "elite_combat" },
+    { "id": "enc_living_forge", "display_name": "活熔炉", "tier": "boss", "enemy_ids": ["living_forge"], "reward_pool": "boss_combat" }
+  ],
+  "events": [
+    {
+      "id": "event_cracked_rune_forge",
+      "display_name": "破损符文炉",
+      "description": "一座仍有余温的符文炉等待代价。",
+      "choices": [
+        { "id": "take_support", "display_name": "献出 8 命元，获得符箓", "cost": { "hp": 8 }, "rewards": [{ "type": "card", "card_id": "guard_return" }] },
+        { "id": "take_gold", "display_name": "搜刮冷却灵屑，获得 35 灵石", "cost": {}, "rewards": [{ "type": "gold", "amount": 35 }] },
+        { "id": "leave", "display_name": "离开", "cost": {}, "rewards": [] }
+      ]
+    }
+  ],
+  "shops": [
+    {
+      "id": "shop_basic_forge",
+      "display_name": "灵市锻炉",
+      "services": [
+        { "id": "buy_support", "display_name": "购买重击符", "price": 40, "reward": { "type": "card", "card_id": "heavy_impact" } },
+        { "id": "buy_armor", "display_name": "购买合金法衣", "price": 55, "reward": { "type": "equipment", "equipment_id": "plate_coat" } },
+        { "id": "heal", "display_name": "温养命元 18 点", "price": 35, "reward": { "type": "heal", "amount": 18 } }
+      ]
+    }
+  ],
+  "map_generation": {
+    "profiles": [
+      {
+        "id": "chapter_1_six_floor",
+        "display_name": "第一章六层地图",
+        "nodes": [
+          { "id": "node_1", "type": "normal", "encounter_id": "enc_rust_pair" },
+          { "id": "node_2", "type": "event", "event_id": "event_cracked_rune_forge" },
+          { "id": "node_3", "type": "shop", "shop_id": "shop_basic_forge" },
+          { "id": "node_4", "type": "normal", "encounter_id": "enc_ember_patrol" },
+          { "id": "node_5", "type": "elite", "encounter_id": "enc_forge_guardian" },
+          { "id": "node_6", "type": "boss", "encounter_id": "enc_living_forge" }
+        ]
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "display_name": "腐化矿脉",
+      "map_profile": "chapter_1_six_floor",
+      "boss_encounter_id": "enc_living_forge"
+    }
+  ],
+  "rewards": {
+    "pools": [
+      { "id": "normal_combat", "gold_min": 18, "gold_max": 24, "card_choices": ["shield_bash", "iron_counter", "ember_bolt", "heavy_impact", "guard_return"] },
+      { "id": "elite_combat", "gold_min": 32, "gold_max": 44, "card_choices": ["heavy_impact", "guard_return", "ember_spread"], "equipment_choices": ["plate_coat", "socket_ring"], "talent_points": 1 },
+      { "id": "boss_combat", "gold_min": 80, "gold_max": 90, "equipment_choices": ["socket_ring"], "talent_points": 1 }
+    ]
+  },
+  "save_fields": [
+    "character_id",
+    "hp",
+    "max_hp",
+    "gold",
+    "deck",
+    "support_inventory",
+    "equipment",
+    "talents",
+    "support_links",
+    "chapter_id",
+    "map_node_index",
+    "completed_nodes"
+  ]
+}

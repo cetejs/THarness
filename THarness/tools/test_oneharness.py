@@ -69,6 +69,25 @@ class OneHarnessCliTests(unittest.TestCase):
         self.assertIn("phase-index.md", method_index)
         self.assertIn("trigger-index.md", method_index)
 
+    def test_game_iteration_workflow_is_routable(self) -> None:
+        workflow_index = (ROOT / "AIGC/workflows/INDEX.md").read_text(encoding="utf-8")
+        capability_index = (ROOT / "AIGC/capabilities/INDEX.md").read_text(encoding="utf-8")
+        workflow = (ROOT / "AIGC/workflows/game-iteration/WORKFLOW.md").read_text(encoding="utf-8")
+        rules_index = (ROOT / "AIGC/workflows/game-iteration/rules/INDEX.md").read_text(encoding="utf-8")
+        template_index = (ROOT / "AIGC/workflows/game-iteration/templates/INDEX.md").read_text(encoding="utf-8")
+
+        self.assertIn("game-iteration", workflow_index)
+        self.assertIn("../workflows/game-iteration/WORKFLOW.md", capability_index)
+        self.assertIn("templates/INDEX.md", workflow)
+        self.assertIn("intake.md", rules_index)
+        self.assertIn("playable-loop-ui.md", rules_index)
+        self.assertIn("data-blueprint.md", rules_index)
+        self.assertIn("development-gate.md", rules_index)
+        self.assertIn("game-iteration-brief.md", template_index)
+        self.assertIn("playable-loop-ui-plan.md", template_index)
+        self.assertIn("game-data-blueprint.md", template_index)
+        self.assertIn("development-gate-plan.md", template_index)
+
 
 if __name__ == "__main__":
     unittest.main()
