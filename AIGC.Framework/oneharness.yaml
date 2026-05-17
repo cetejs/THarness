@@ -1,0 +1,74 @@
+framework_root: .
+
+required_entries:
+  - INDEX.md
+  - workflows/INDEX.md
+  - wiki/INDEX.md
+  - projects/INDEX.md
+  - capabilities/INDEX.md
+
+wiki_index_file: wiki/index.yaml
+wiki_front_matter_required_fields:
+  - id
+  - title
+  - summary
+  - type
+  - status
+  - tags
+  - relates
+  - read_when
+  - source
+  - updated
+wiki_front_matter_allow_empty_fields:
+  - relates
+
+workflow_root: workflows
+workflow_rules_dir_name: rules
+workflow_rules_index_name: INDEX.md
+workflow_rule_required_fields:
+  - id
+  - title
+  - workflow
+  - phase
+  - read_when
+  - updated
+workflow_rule_exclude_files:
+  - INDEX.md
+
+gate_required_paths:
+  - workflows/development/rules/intake.md
+  - workflows/development/rules/scope.md
+  - workflows/development/rules/verification.md
+  - workflows/development/rules/self-check.md
+  - workflows/development/rules/quality-gate.md
+  - workflows/development/rules/delivery.md
+  - workflows/development/rules/issue-routing.md
+  - workflows/development/rules/wiki-sync.md
+  - workflows/development/templates/development-task-delivery.md
+  - projects/rules/project-isolation.md
+  - projects/rules/project-wiki-retrieval.md
+  - projects/rules/project-wiki-update.md
+
+gate_boundary_scan_paths:
+  - wiki
+  - workflows
+  - projects
+gate_boundary_exclude_names:
+  - templates
+gate_boundary_forbidden_patterns:
+  - ':\'
+  - "file:///"
+  - "/home/"
+  - "/Users/"
+
+self_check_path_rules:
+  - wiki|python tools\oneharness.py index --check
+  - workflows|python tools\oneharness.py doctor
+  - projects|python tools\oneharness.py doctor
+  - capabilities|python tools\oneharness.py doctor
+  - oneharness.yaml|python tools\oneharness.py gate
+  - tools|python tools\oneharness.py gate
+  - tools|python -m unittest tools.test_oneharness
+
+self_check_delivery_commands:
+  - python tools\oneharness.py gate

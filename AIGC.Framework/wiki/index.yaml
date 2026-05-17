@@ -1,0 +1,24 @@
+watch:
+  - wiki/architecture/
+  - wiki/rules/
+
+exclude:
+  - INDEX.md
+  - templates/
+
+pages:
+  - wiki/architecture/capability-registry.md
+  - wiki/architecture/configuration-surface.md
+  - wiki/architecture/dependency-direction.md
+  - wiki/architecture/entry-map.md
+  - wiki/architecture/knowledge-boundary.md
+  - wiki/architecture/knowledge-layering.md
+  - wiki/architecture/module-boundaries.md
+  - wiki/architecture/project-adapter-layer.md
+  - wiki/architecture/repository-structure.md
+  - wiki/architecture/verifiable-work-loop.md
+  - wiki/architecture/wiki-mediated-workflow-handoff.md
+  - wiki/architecture/workflow-routing.md
+  - wiki/rules/building.md
+  - wiki/rules/health.md
+  - wiki/rules/retrieval.md
