@@ -7,6 +7,7 @@
 | 实验 | 状态 | 入口 | 说明 |
 | --- | --- | --- | --- |
 | `EXP-001-worldseed` | active | `EXP-001-worldseed/README.md` | 第一个 Godot .NET/C# 游戏实验，用于验证通用游戏开发流程。 |
+| `EXP-002-bloomweaver` | active | `EXP-002-bloomweaver/README.md` | 第二个游戏实验，用于迁入 BloomWeaver 策划案并准备后续引擎迁移验证。 |
 
 ## 写入边界
 
